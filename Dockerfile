@@ -1,9 +1,9 @@
-FROM debian:stretch
+FROM ubuntu
 
 MAINTAINER Pablo Dorado <pablo@poetri.co>
 
-ENV NGINX_VERSION 1.15.2
-ENV PHP_VERSION 1:7.3.6
+ENV NGINX_VERSION 1.14.2
+ENV PHP_VERSION 7.3.6
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
