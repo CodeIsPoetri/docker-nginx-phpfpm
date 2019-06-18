@@ -2,8 +2,8 @@ FROM debian:stretch
 
 MAINTAINER Christian Luginbühl <dinkel@pimprecords.com>
 
-ENV NGINX_VERSION 1.10.3
-ENV PHP_VERSION 1:7.0
+ENV NGINX_VERSION 1.15.2
+ENV PHP_VERSION 1:7.3.6
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
@@ -26,9 +26,8 @@ RUN rm -rf /var/www/ && \
 COPY default /etc/nginx/sites-available/
 COPY fastcgi-php.conf /etc/nginx/snippets/
 
-EXPOSE 80
+EXPOSE 5000
 
 COPY run.sh /
 
 CMD ["/run.sh"]
-
