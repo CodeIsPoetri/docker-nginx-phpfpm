@@ -7,6 +7,8 @@ RUN apt-get update && \
         curl \
         php-mysql \
         php-mbstring \
+        php-simplexml \
+        php-dom \
         ca-certificates \
         nginx \
         php-fpm && \
