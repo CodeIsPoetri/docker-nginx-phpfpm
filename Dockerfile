@@ -5,6 +5,9 @@ MAINTAINER Pablo Dorado <pablo@poetri.co>
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -y \
         curl \
+        zip \
+        unzip \
+        php-zip \
         php-mysql \
         php-mbstring \
         php-simplexml \
